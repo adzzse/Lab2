@@ -46,14 +46,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginBottom="84dp"
         android:background="#EFEFEF"
         android:text="CỘNG"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/TAnswer"
         app:layout_constraintEnd_toStartOf="@+id/btn4"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enum2" />
 
     <Button
         android:id="@+id/btn4"
@@ -69,14 +71,14 @@
         app:layout_constraintBottom_toTopOf="@+id/TAnswer"
         app:layout_constraintEnd_toStartOf="@+id/btn5"
         app:layout_constraintStart_toEndOf="@+id/btn6"
-        app:layout_constraintTop_toBottomOf="@+id/Enum2" />
+        app:layout_constraintTop_toBottomOf="@+id/Enum2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/Enum1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:layout_marginBottom="59dp"
         android:background="#E0E0E0"
         android:ems="10"
         android:hint="Nhập số thứ nhất"
@@ -84,7 +86,6 @@
         android:minHeight="48dp"
         android:padding="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/Enum2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,38 +94,39 @@
         android:id="@+id/Enum2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="60dp"
         android:background="#E0E0E0"
         android:ems="10"
         android:hint="Nhập số thứ hai"
         android:inputType="number"
         android:padding="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btn6"
-        tools:layout_editor_absoluteX="107dp" />
+        app:layout_constraintTop_toBottomOf="@+id/Enum1"
+        tools:layout_editor_absoluteX="3dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="342dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="28dp"
         android:text="Kết Quả"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/TAnswer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enum2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/TAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
         android:background="#CCCCFF"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602"
+        tools:layout_editor_absoluteX="3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
