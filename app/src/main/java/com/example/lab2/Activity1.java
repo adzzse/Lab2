@@ -26,17 +26,15 @@ public class Activity1 extends AppCompatActivity {
         btn1 = findViewById(R.id.btn1);
         tanswer = findViewById(R.id.TAnswer);
 
-        //code
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Random random = new Random();
-                //
+
                 int min = Integer.parseInt(enum1.getText().toString());
                 int max = Integer.parseInt(enum2.getText().toString());
-                //
                 int org = random.nextInt((max - min) + 1) + min;
-                //
+
                 String result = String.valueOf(org);
                 System.out.println(result);
                 tanswer.setText(result);

@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Activity3 extends AppCompatActivity {
 
-    //khai bao
     EditText Etext1, Etext2;
     Button btn1;
     TextView Tviewcreate;
@@ -23,28 +22,23 @@ public class Activity3 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity3);
 
-        // anh xa
-        Etext1 = findViewById(R.id.Etext1); // User name field
-        Etext2 = findViewById(R.id.Etext2); // Password field
-        btn1 = findViewById(R.id.btn1); // Button sign in
-        Tviewcreate = findViewById(R.id.Tviewcreate); // Text view use to click create
+        Etext1 = findViewById(R.id.Etext1);
+        Etext2 = findViewById(R.id.Etext2);
+        btn1 = findViewById(R.id.btn1);
+        Tviewcreate = findViewById(R.id.Tviewcreate);
 
-        // vao activity sign up khi nhan Tviewcreate ( Sign up )
         Tviewcreate.setOnClickListener(view -> {
             Intent intent = new Intent(Activity3.this, Activity3_1.class);
             startActivity(intent);
         });
 
-        // check su kien dang nhap
-        // khi nhan vao btn1 -> lay du lieu nhap username,pass -> check du lieu nhap
         btn1.setOnClickListener(view -> {
-            String username = Etext1.getText().toString().trim(); // lay du lieu username
-            String password = Etext2.getText().toString().trim(); // lay du lieu password
+            String username = Etext1.getText().toString().trim();
+            String password = Etext2.getText().toString().trim();
 
-            if (username.isEmpty() || password.isEmpty()) { // check du lieu rong
+            if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(Activity3.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
             } else {
-                // // cho phep vao
                 Toast.makeText(Activity3.this, "Logged in!", Toast.LENGTH_SHORT).show();
             }
         });

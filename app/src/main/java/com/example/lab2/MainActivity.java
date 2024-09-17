@@ -8,26 +8,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button clk1,clk2,clk3;
+    Button bt1,bt2,bt3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        clk1 = findViewById(R.id.clk1);
-        clk2 = findViewById(R.id.clk2);
-        clk3 = findViewById(R.id.clk3);
+        bt1 = findViewById(R.id.bt1);
+        bt2 = findViewById(R.id.bt2);
+        bt3 = findViewById(R.id.bt3);
 
-        clk1.setOnClickListener(view -> {
+        bt1.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, Activity1.class);
             startActivity(intent);
         });
-        clk2.setOnClickListener(view -> {
+        bt2.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, Activity2.class);
             startActivity(intent);
         });
-        clk3.setOnClickListener(view -> {
+        bt3.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, Activity3.class);
             startActivity(intent);
         });

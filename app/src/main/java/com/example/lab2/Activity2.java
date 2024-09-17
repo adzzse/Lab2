@@ -73,9 +73,9 @@ public class Activity2 extends AppCompatActivity {
                 int num1 = Integer.parseInt(Enum1.getText().toString());
                 int num2 = Integer.parseInt(Enum2.getText().toString());
 
-                int cal = 0; //  chia
+                double cal = 0;
                 if (num2 > 0) {
-                    cal = num1 / num2;
+                    cal = (double)num1 / (double)num2;
                 }
                 String result = String.valueOf(cal);
                 System.out.println(result);
